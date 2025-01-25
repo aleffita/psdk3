@@ -63,14 +63,6 @@ RUN apt update -y && \
     apt -y clean autoclean autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-RUN echo 'cacert=/etc/ssl/certs/ca-certificates.crt' >> ~/.curlrc && \
-    git config --global http.sslverify 'false' && \
-    curl https://pyenv.run | bash && \
-    pyenv update && \
-    pyenv install $PYTHON_VERSION && \
-    pyenv global $PYTHON_VERSION && \
-    pyenv rehash && \
-    pip install pycrypto
 
 FROM base as builder
 

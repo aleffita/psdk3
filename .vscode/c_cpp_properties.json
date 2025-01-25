@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "PS3",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/ps3dev/ppu/ppu/include/**",
+                "/usr/local/ps3dev/ppu/include/**",
+                "/usr/local/ps3dev/portlibs/ppu/include/**"
+            ],
+            "defines": [
+                "PS3",
+                "PSL1GHT"
+            ],
+            "compilerPath": "/usr/local/ps3dev/ppu/bin/ppu-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
+

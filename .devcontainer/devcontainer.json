@@ -1,0 +1,31 @@
+{
+    "name": "PSDK3 Development",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "..",
+        "target": "runtime"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "C_Cpp.default.includePath": [
+                    "${env:PS3DEV}/ppu/ppu/include",
+                    "${env:PSL1GHT}/ppu/include"
+                ],
+                "C_Cpp.default.defines": [
+                    "PS3",
+                    "PSL1GHT"
+                ]
+            }
+        }
+    },
+    "remoteUser": "root",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
+}
